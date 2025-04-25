@@ -18,7 +18,7 @@ const AlertsPlayNormal = ({setalertStatus, multi, num1, num2, num3, num4, num5, 
     try{
       let nums = [num1, num2, num3, num4, num5, num6];
       setplaystatus(1);
-      const tx = await ChainWallet.playballcontract.play_ball_normal(nums, multi, {value: (myContractInfo.base_price*multi).toString()});
+      const tx = await ChainWallet.playballcontract.play_ball_dealer_normal(nums, multi, myContractInfo.dealer_address, {value: (myContractInfo.base_price*multi).toString()});
       let res = await tx.wait();
       if(res.status === 1){
         setplaystatus(2);        

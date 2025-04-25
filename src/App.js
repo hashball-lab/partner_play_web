@@ -30,6 +30,7 @@ function App() {
     bet_diff: 3600*46,
     commit_diff: 3600,
     base_price: 1*10**17,
+    dealer_address: '0x0000000000000000000000000000000000000000', //replace the address with your partner address
   }
 
 

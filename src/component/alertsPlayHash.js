@@ -35,7 +35,7 @@ const AlertsPlayHash = ({setalertHashStatus, inputValueSalt, multi, num1, num2, 
   async function doPlay() {
       try{
         setplaystatus(1);
-        const tx = await ChainWallet.playballcontract.play_ball(hashrandom, multi, {value: (myContractInfo.base_price*multi).toString()});
+        const tx = await ChainWallet.playballcontract.play_ball_dealer(hashrandom, multi, myContractInfo.dealer_address, {value: (myContractInfo.base_price*multi).toString()});
         let res = await tx.wait();
         if(res.status === 1){
           setplaystatus(2);          
