@@ -3,9 +3,9 @@ Play web source code for partner integration.
 
 You can run local to see the page and function, steps are as follows.
 
-1. git clone https://github.com/hashball-lab/somnia_play_web.git
+1. git clone https://github.com/hashball-lab/partner_play_web.git
 
-2. cd somnia_play_web
+2. cd partner_play_web
 
 3. replace the dealer_address with your partner address in App.js
 
