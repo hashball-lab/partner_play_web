@@ -26,9 +26,9 @@ class Wallet{
     constructor(){
         makeAutoObservable(this)
     }
-    reset() {
+    async reset() {
         this.provider = new ethers.providers.Web3Provider(window.ethereum);
-        this.signer = this.provider.getSigner()
+        this.signer = await this.provider.getSigner()
         this.hashballcontract = new ethers.Contract(this.hashballcontractAddress, hashballAbi, this.signer)
         this.playballcontract = new ethers.Contract(this.playballcontractAddress, playballAbi, this.signer)
         this.drawwinnercontract = new ethers.Contract(this.drawwinnercontractAddress, drawwinnerAbi, this.signer)
