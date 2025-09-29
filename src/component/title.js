@@ -65,13 +65,13 @@ const Title = ({accounts, setAccounts, choosePage, setChoosePage}) => {
     async function checkNetwork(){
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         let chain = await provider.getNetwork();
-          if(chain.chainId != 1301){
+          if(chain.chainId != 10143){
           try {
             await window.ethereum.request({
               method: "wallet_switchEthereumChain",
               params: [
                 {
-                chainId: "0xc488"
+                chainId: "0x279f"
                 } 
               ]
             });
@@ -82,19 +82,19 @@ const Title = ({accounts, setAccounts, choosePage, setChoosePage}) => {
                   method: 'wallet_addEthereumChain',
                   params: [
                     {
-                      chainId: "0xc488",
-                      chainName: 'Somnia Testnet',
-                      rpcUrls: ['https://dream-rpc.somnia.network'],
-                      blockExplorerUrls: ['https://shannon-explorer.somnia.network'],
+                      chainId: "0x279f",
+                      chainName: 'Monad Testnet',
+                      rpcUrls: ['https://testnet-rpc.monad.xyz'],
+                      blockExplorerUrls: ['https://testnet.monadexplorer.com'],
                       nativeCurrency: {
-                        name: 'STT',
-                        symbol: 'STT',
+                        name: 'MON',
+                        symbol: 'MON',
                       },
                     }
                   ]
                 })
             } catch (ee) {
-              alert("Please add Somnia Testnet manually");
+              alert("Please add Monad Testnet manually");
             }
             
           };
