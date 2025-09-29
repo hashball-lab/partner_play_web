@@ -9,14 +9,14 @@ import {makeAutoObservable} from 'mobx'
 
 class Wallet{
     
-    providers = new ethers.providers.JsonRpcProvider('https://dream-rpc.somnia.network')
+    providers = new ethers.providers.JsonRpcProvider('https://testnet-rpc.monad.xyz')
     
-    hashballcontractAddress = "0x0d884A37bCA6226718cb9d6E0574452F62c4187d"
-    committeescontractAddress = "0xD5EC8B599B86F8078fdAeeD7cAA95bFb7f791a20"
-    playballcontractAddress = "0xB4aDE14D8F967d416CbfC62253bD029f81eF85B0"
-    drawwinnercontractAddress = "0xe5756011922032DeeCB6102d44cF261189D547d2"
+    hashballcontractAddress = "0x7F13609fe56D5BB9f1bbcA365855E9793E685986"
+    committeescontractAddress = "0x569aE7dD2111E7128aA019468627F6118bfE343C"
+    playballcontractAddress = "0x0d884A37bCA6226718cb9d6E0574452F62c4187d"
+    drawwinnercontractAddress = "0xD4642F37AbB2480aaD0732D74f3F08662eE28196"
 
-    chainID = 50312
+    chainID = 10143
 
     hashballcontract = new ethers.Contract(this.hashballcontractAddress, hashballAbi, this.providers)
     playballcontract = new ethers.Contract(this.playballcontractAddress, playballAbi, this.providers)
